@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvQ1;
+//    TextView tvQ1;
     Button btnRevealQ1;
 
-    TextView tvQ2;
+//    TextView tvQ2;
     Button btnRevealQ2;
 
     @Override
@@ -21,17 +21,42 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvQ1 = findViewById(R.id.textViewQ1);
+//        tvQ1 = findViewById(R.id.textViewQ1);
+//        btnRevealQ1 = findViewById(R.id.buttonRevealQ1);
+//
+//        tvQ2 = findViewById(R.id.textViewQ2);
+//        btnRevealQ2 = findViewById(R.id.buttonRevealQ2);
+//
+//        btnRevealQ1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, AnswerActivity1.class);
+//                intent.putExtra("Question", "Q1");
+//                startActivity(intent);
+//            }
+//        });
+//
+//        btnRevealQ2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, AnswerActivity2.class);
+//                intent.putExtra("Question2", "Q2");
+//                startActivity(intent);
+//            }
+//        });
+//
+//        tvQ1 = findViewById(R.id.textViewQ1);
         btnRevealQ1 = findViewById(R.id.buttonRevealQ1);
 
-        tvQ2 = findViewById(R.id.textViewQ2);
+//        tvQ2 = findViewById(R.id.textViewQ2);
         btnRevealQ2 = findViewById(R.id.buttonRevealQ2);
 
         btnRevealQ1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AnswerActivity1.class);
+                Intent intent = new Intent(MainActivity.this, ChallengeActivity.class);
                 intent.putExtra("Question", "Q1");
+                intent.putExtra("Answer", "Queue");
                 startActivity(intent);
             }
         });
@@ -39,9 +64,10 @@ public class MainActivity extends AppCompatActivity {
         btnRevealQ2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(MainActivity.this, AnswerActivity2.class);
-                intent2.putExtra("Question2", "Q2");
-                startActivity(intent2);
+                Intent intent = new Intent(MainActivity.this, ChallengeActivity.class);
+                intent.putExtra("Question", "Q2");
+                intent.putExtra("Answer", "Gone");
+                startActivity(intent);
             }
         });
 
